@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="8dp"
+    android:elevation="8dp"
+    android:layout_margin="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/productIv"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/product_image"
+            android:background="@color/black"
+            android:scaleType="fitXY"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/productTitleTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/productIv"
+            app:layout_constraintStart_toStartOf="@+id/productIv"
+            app:layout_constraintTop_toBottomOf="@+id/productIv"
+            tools:text="Arora High Ankle Boot XXL Size" />
+
+        <TextView
+            android:id="@+id/productPriceTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/productTitleTv"
+            app:layout_constraintStart_toStartOf="@+id/productTitleTv"
+            app:layout_constraintTop_toBottomOf="@+id/productTitleTv"
+            tools:text="₹ 159.00" />
+
+        <ImageView
+            android:id="@+id/productRatingIv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_star"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/productRatingTv"
+            app:layout_constraintEnd_toStartOf="@+id/productRatingTv"
+            app:layout_constraintTop_toTopOf="@+id/productRatingTv"
+            app:tint="@android:color/holo_orange_dark" />
+
+        <TextView
+            android:id="@+id/productRatingTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:maxLines="1"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/productPriceTv"
+            app:layout_constraintTop_toBottomOf="@+id/productPriceTv"
+            tools:text="3.9" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
